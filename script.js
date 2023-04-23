@@ -12,7 +12,7 @@ function renderTarefas(tasksToRender = tarefas) {
   tasksToRender.map((tarefa) => {
     let itemElement = document.createElement("li");
     //let itemText = document.createTextNode(tarefa.text + " (" +"" + tarefa.timestamp + ")");
-    let itemText = document.createTextNode("" + tarefa.timestamp + "- " + tarefa.text);
+    let itemText = document.createTextNode("" + tarefa.timestamp + " - " + tarefa.text);
 
     let linkElement = document.createElement("a");
     linkElement.setAttribute("href", "#");
@@ -43,7 +43,16 @@ function adicionarTarefa() {
     console.log(inputElement.value);
   }
   let tarefaText = inputElement.value;
-  let timestamp = new Date().toLocaleString();
+  
+  let dateFormatter = new Intl.DateTimeFormat('pt-BR', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+  let timestamp = dateFormatter.format(new Date());
+  
   tarefas.push({ text: tarefaText, completed: false, timestamp: timestamp });
   inputElement.value = "";
   listElement.innerHTML = "";
@@ -51,6 +60,7 @@ function adicionarTarefa() {
   renderTarefas();
   salvarTarefas();
 }
+
 
 buttonElement.addEventListener("click", adicionarTarefa);
 
