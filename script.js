@@ -11,7 +11,8 @@ function renderTarefas(tasksToRender = tarefas) {
 
   tasksToRender.map((tarefa) => {
     let itemElement = document.createElement("li");
-    let itemText = document.createTextNode(tarefa.text + " (Data/Hora: " + tarefa.timestamp + ")");
+    //let itemText = document.createTextNode(tarefa.text + " (" +"" + tarefa.timestamp + ")");
+    let itemText = document.createTextNode("" + tarefa.timestamp + "- " + tarefa.text);
 
     let linkElement = document.createElement("a");
     linkElement.setAttribute("href", "#");

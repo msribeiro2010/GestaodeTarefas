@@ -62,6 +62,8 @@ body {
   }
   
   .filter-button {
+    width: 100px;
+    display: block;
     padding: 0px 0px;
     margin: 5px auto;
     border-radius: 20px;
