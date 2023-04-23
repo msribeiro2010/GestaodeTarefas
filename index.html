@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <p class="title">Gestão de Tarefas</p>
+        <input type="text" placeholder="Digite uma tarefa" size="60%" class="texto"><br>
+        <div class="button-container">
+            <button class="button-type">REGISTRAR</button>
+            <button class="button-type" id="delete-all">EXCLUIR TODAS</button>
+        </div>
+       <div id="filter">
+            <button class="filter-button" data-filter="all">Todas</button>
+            <button class="filter-button" data-filter="active">Ativas</button>
+            <button class="filter-button" data-filter="completed">Concluídas</button>
+        </div>
+        <ul>
+        </ul>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
