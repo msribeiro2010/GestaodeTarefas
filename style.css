@@ -64,7 +64,7 @@ body {
   .filter-button {
     width: 100px;
     display: block;
-    padding: 0px 0px;
+    padding: 10px 10px;
     margin: 5px auto;
     border-radius: 20px;
     font-size: 16px;
@@ -83,7 +83,7 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    font-size: 24px;
+    font-size: 20px;
   }
   
   ul li {
@@ -91,14 +91,14 @@ body {
     grid-template-columns: 1fr auto;
     grid-gap: 10px;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   
   ul li a {
     display: block;
     color: #333;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 10px;
     text-decoration: none;
     transition: background-color 0.3s ease;
   }
