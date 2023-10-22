@@ -65,6 +65,12 @@ function renderTarefas(tasksToRender = tarefas) {
         listElement.appendChild(itemElement);
     });
 }
+ inputElement.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) { // 13 é o código da tecla Enter/Return
+        adicionarTarefa();
+    }
+});
+
 
 function adicionarTarefa() {
     if (inputElement.value === "") {
